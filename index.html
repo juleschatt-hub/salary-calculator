@@ -12,43 +12,58 @@
   <main>
     <h2>Add Employee</h2>
     <!-- Add employee inputs form here -->
-    <form class="add-employee-form" onSubmit="addEmployee(event)">
-      <!-- REMEMBER to change required to TRUE!!!!!!!!! -->
-      <label for="firstName">First Name:</label>
-      <input data-testid="firstNameInput" id="firstName" type="string" required="false" placeholder="First Name" />
-
-      <label for="lastName">Last Name:</label>
-      <input data-testid="lastNameInput" id="lastName" type="string" required="false" placeholder="Last Name" />
-
-      <label for="employeeID">Employee ID#:</label>
-      <input data-testid="idInput" id="employeeID" type="number" required="false" placeholder="Employee ID" />
-
-      <label for="jobTitle">Job Title:</label>
-      <input data-testid="titleInput" id="jobTitle" type="string" required="false" placeholder="Job Title" />
-
-      <label for="annualSalary">Annual Salary:</label>
-      <input data-testid="annualSalaryInput" id="annualSalary" type="number" required="false" placeholder="Annual Salary" />
-
-      <button data-testid="submitButton" type="submit" onClick="addEmployee(event)">
-        Add New Employee
-      </button>
-
-    </form>
+    <div class="formContainer">
+      <form class="addEmployeeForm" onSubmit="addEmployee(event)">
+        <!-- REMEMBER to change required to TRUE!!!!!!!!! -->
+        <div class="labelInput">
+          <label for="firstName">First Name:</label>
+          <input data-testid="firstNameInput" id="firstName" type="string" required="false" placeholder="First Name" />
+        </div>
+        <div class="labelInput">
+          <label for="lastName">Last Name:</label>
+          <input data-testid="lastNameInput" id="lastName" type="string" required="false" placeholder="Last Name" />
+        </div>  
+        <div class="labelInput">
+          <label for="employeeID">Employee ID#:</label>
+          <input data-testid="idInput" id="employeeID" type="number" required="false" placeholder="Employee ID" />
+        </div>  
+        <div class="labelInput">
+          <label for="jobTitle">Job Title:</label>
+          <input data-testid="titleInput" id="jobTitle" type="string" required="false" placeholder="Job Title" />
+        </div>
+        <div class="labelInput">
+          <label for="annualSalary">Annual Salary:</label>
+          <input data-testid="annualSalaryInput" id="annualSalary" type="number" required="false" placeholder="Annual Salary" />
+        </div>  
+        <button data-testid="submitButton" type="submit" onClick="addEmployee(event)">Add New Employee</button>
+      </form>
+    </div>
     <h2>Employees</h2>
     <!-- Table of employees added here -->
     <table>
-      <tr>
-        <th>First Name</th>
-        <th>Last Name</th>
-        <th>ID</th>
-        <th>Title</th>
-        <th>Annual Salary</th>
-      </tr>
+      <thead>
+        <tr>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>ID</th>
+          <th>Title</th>
+          <th>Annual Salary</th>
+        </tr>
+      </thead>
+      <tbody id="employeeData">
+        <!-- employee rows go here -->
+      </tbody>
     </table>
   </main>
   <footer>
-    <p>Total Monthly</p>
+    <div id="monthlyCostData">
+      
+    </div>
+    
+
   </footer>
   <script src="script.js"></script>
 </body>
+
+
 </html>
