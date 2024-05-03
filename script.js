@@ -33,7 +33,7 @@ function addEmployee(event) {
     </tr>
 
     `
-    
+   
     let employee = {
         first: `${firstNameVal}`,
         last: `${lastNameVal}`,
@@ -52,6 +52,13 @@ function addEmployee(event) {
         <p>${totalMonthly}</p>
     
     `
+
+    //attempt to sanitize inputs NOT WORKING
+    firstNameVal = '';
+    lastNameVal = '';
+    employeeIDVal = 0;
+    jobTitleVal = '';
+    annualSalaryVal = 0;
 }
 
 
