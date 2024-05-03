@@ -17,11 +17,11 @@
         <!-- REMEMBER to change required to TRUE!!!!!!!!! -->
         <div class="labelInput">
           <label for="firstName">First Name:</label>
-          <input data-testid="firstNameInput" id="firstName" type="string" required="false" placeholder="First Name" />
+          <input data-testid="firstNameInput" id="firstName" type="text" required="false" placeholder="First Name" />
         </div>
         <div class="labelInput">
           <label for="lastName">Last Name:</label>
-          <input data-testid="lastNameInput" id="lastName" type="string" required="false" placeholder="Last Name" />
+          <input data-testid="lastNameInput" id="lastName" type="text" required="false" placeholder="Last Name" />
         </div>  
         <div class="labelInput">
           <label for="employeeID">Employee ID#:</label>
@@ -29,13 +29,14 @@
         </div>  
         <div class="labelInput">
           <label for="jobTitle">Job Title:</label>
-          <input data-testid="titleInput" id="jobTitle" type="string" required="false" placeholder="Job Title" />
+          <input data-testid="titleInput" id="jobTitle" type="text" required="false" placeholder="Job Title" />
         </div>
         <div class="labelInput">
           <label for="annualSalary">Annual Salary:</label>
           <input data-testid="annualSalaryInput" id="annualSalary" type="number" required="false" placeholder="Annual Salary" />
         </div>  
-        <button data-testid="submitButton" type="submit" onClick="addEmployee(event)">Add New Employee</button>
+        <!-- <button data-testid="submitButton" type="submit" onClick="addEmployee(event)">Add New Employee</button> -->
+        <input type="submit" onClick="addEmployee(event)" data-testid="submitButton" value="Add Employee" />
       </form>
     </div>
     <h2>Employees</h2>
