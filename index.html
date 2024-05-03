@@ -11,7 +11,30 @@
   </header>
   <main>
     <h2>Add Employee</h2>
+    <!-- Add employee inputs form here -->
+    <form class="add-employee-form" onSubmit="addEmployee(event)">
+      <label for="firstName">First Name:</label>
+      <input data-testid="firstNameInput" id="firstName" type="string" required="true" placeholder="First Name" />
+
+      <label for="lastName">Last Name:</label>
+      <input data-testid="lastNameInput" id="lastName" type="string" required="true" placeholder="Last Name" />
+
+      <label for="IDNumber">Employee ID#:</label>
+      <input data-testid="idInput" id="employeeID" type="number" required="true" placeholder="Employee ID" />
+
+      <label for="jobTitle">Job Title:</label>
+      <input data-testid="titleInput" id="jobTitle" type="string" required="true" placeholder="Job Title" />
+
+      <label for="annualSalary">Annual Salary:</label>
+      <input data-testid="annualSalaryInput" id="annualSalary" type="number" required="true" placeholder="Annual Salary" />
+
+      <button data-testid="submitButton" type="submit">
+        Add New Employee
+      </button>
+
+    </form>
     <h2>Employees</h2>
+    <!-- Table of employees added here -->
   </main>
   <footer>
     <p>Total Monthly</p>
