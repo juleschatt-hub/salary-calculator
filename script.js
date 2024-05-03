@@ -6,6 +6,11 @@
 //Adds employees salary to the total payroll cost for the company
 //sanitize inputs after emplyee is added.
 
+function addEmployee(event) {
+
+    console.log('form submits');
+    event.preventDefault();
+}
 
 //Output to DOM must be in the form of a table on the index file
 //The total employee cost must be in the footer element.
