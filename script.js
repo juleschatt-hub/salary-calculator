@@ -4,13 +4,13 @@
 ***************************************************************************/
 //submit button onclick function that adds a new employee to the table
 //Adds employees salary to the total payroll cost for the company
-//sanitize inputs after emplyee is added.
+//clear input fields after submit
 let employees = [];
 let totalMonthly = 0;
 function addEmployee(event) {
 
     console.log('form submits');
-    //stops page refresh on submit
+//stops page refresh on submit
     event.preventDefault();
 //creating a querySelector to target each input field by ID
     let firstNameVal = document.querySelector('#firstName');
@@ -44,7 +44,43 @@ function addEmployee(event) {
     }
     
     //pushes a newly created employee to an array called employees
+    // employees.push(employee);
+
+    // //does math to calculate monthly cost after new employee is added
+    // totalMonthly = Number(employee.salary) / 12 + totalMonthly;
+    // console.log(employees);
+    // console.log(totalMonthly);
+    // let totalMonthlyVal = document.querySelector('#monthlyCostData');
+    // totalMonthlyVal.innerHTML = `
+    //     <p>Monthly cost</p>
+    //     <p>${totalMonthly}</p>
+    
+    // `
+
+    //clear input fields
+    firstNameVal.value = '';
+    lastNameVal.value = '';
+    employeeIDVal.value = '';
+    jobTitleVal.value = '';
+    annualSalaryVal.value = '';
+    console.log('firstnameval: ', firstNameVal);
+    
+    employeeArray(employee);
+    overBudget();
+    return employee
+}
+
+function overBudget() {
+    if(totalMonthly > 20000) {
+       let footerClass = document.getElementById('footer');
+       footerClass.classList.add('over-budget'); 
+    }
+}
+
+function employeeArray(employee) {
     employees.push(employee);
+
+    //does math to calculate monthly cost after new employee is added
     totalMonthly = Number(employee.salary) / 12 + totalMonthly;
     console.log(employees);
     console.log(totalMonthly);
@@ -54,14 +90,6 @@ function addEmployee(event) {
         <p>${totalMonthly}</p>
     
     `
-
-    //attempt to clear input fields NOT WORKING!!!!!!!!!!
-    firstNameVal.value = '';
-    lastNameVal.value = '';
-    employeeIDVal.value = '';
-    jobTitleVal.value = '';
-    annualSalaryVal.value = '';
-    console.log('firstnameval: ', firstNameVal);
 }
 
 
