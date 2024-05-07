@@ -46,6 +46,8 @@ th {
 
 .btn {
     background-color: cornflowerblue;
+    border-radius: 20px;
+
 }
 
 
@@ -53,9 +55,7 @@ th {
     margin: 10px;
 }
 
-.btn {
-    border-radius: 20px;
-}
+
 
 .over-budget {
     background-color: red;

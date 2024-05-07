@@ -52,6 +52,10 @@ function addEmployee(event) {
     jobTitleVal.value = '';
     annualSalaryVal.value = '';
     console.log('firstnameval: ', firstNameVal);
+
+    
+
+
     
     employeeArray(employee);
     overBudget();
