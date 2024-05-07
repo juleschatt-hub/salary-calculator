@@ -28,7 +28,7 @@ function addEmployee(event) {
         <td>${lastNameVal.value}</td>
         <td>${employeeIDVal.value}</td>
         <td>${jobTitleVal.value}</td>
-        <td>${annualSalaryVal.value}</td>
+        <td>$${annualSalaryVal.value}</td>
         <td><button onClick="removeEmployee(event)">Delete</button></td>
     </tr>
 
@@ -43,19 +43,7 @@ function addEmployee(event) {
         salary: `${annualSalaryVal.value}`
     }
     
-    //pushes a newly created employee to an array called employees
-    // employees.push(employee);
-
-    // //does math to calculate monthly cost after new employee is added
-    // totalMonthly = Number(employee.salary) / 12 + totalMonthly;
-    // console.log(employees);
-    // console.log(totalMonthly);
-    // let totalMonthlyVal = document.querySelector('#monthlyCostData');
-    // totalMonthlyVal.innerHTML = `
-    //     <p>Monthly cost</p>
-    //     <p>${totalMonthly}</p>
-    
-    // `
+   
 
     //clear input fields
     firstNameVal.value = '';
@@ -73,7 +61,8 @@ function addEmployee(event) {
 function overBudget() {
     if(totalMonthly > 20000) {
        let footerClass = document.getElementById('footer');
-       footerClass.classList.add('over-budget'); 
+       footerClass.classList.add('over-budget');
+       alert('You are over budget, time for layoffs!!!'); 
     }
 }
 
@@ -87,7 +76,7 @@ function employeeArray(employee) {
     let totalMonthlyVal = document.querySelector('#monthlyCostData');
     totalMonthlyVal.innerHTML = `
         <p>Monthly cost</p>
-        <p>${totalMonthly}</p>
+        <p>$${totalMonthly}</p>
     
     `
 }

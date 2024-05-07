@@ -1,7 +1,11 @@
 body {
     margin: 0;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-     
+    font-family: 'Trebuchet MS', 
+                 'Lucida Sans Unicode', 
+                 'Lucida Grande', 
+                 'Lucida Sans', 
+                 Arial, 
+                 sans-serif;
 }
 
 header {
@@ -9,48 +13,50 @@ header {
     background-color: grey;
     color: white;
     margin: 0;
-    padding: 15px;   
+    padding: 15px;
 }
 
- table, th, td {
+table,
+th,
+td {
     border: 1px solid;
     margin: 0;
     border-collapse: collapse;
-  }
+}
 
-  th {
+th {
     background-color: lightgrey;
-    width:130px;
-  }
+    width: 130px;
+}
 
-  .table {
+.table {
     margin: 10px;
-    width: 1300px; 
-  }
+    max-width: 1300px;
+}
 
 .labelInput {
     float: left;
     margin: 5px;
-    
+
 }
 
 .inputContainer {
-    width: 1300px;
+    max-width: 1300px;
 }
 
-.btn { 
-    /* border: none;   */
+.btn {
     background-color: cornflowerblue;
 }
-    
 
-.addEmployeeForm { 
-    margin:10px;
+
+.addEmployeeForm {
+    margin: 10px;
 }
-.btn{
+
+.btn {
     border-radius: 20px;
 }
-.btnContainer {
-    /* position: relative; */
-}
 
+.over-budget {
+    background-color: red;
+}
