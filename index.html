@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="style.css">
   <title>Salary Calculator</title>
 </head>
+
 <body>
   <header>
     <h1>Salary Calculator</h1>
@@ -12,9 +15,10 @@
   <main>
     <h2>Add Employee</h2>
     <!-- Add employee inputs form here -->
-    <div class="formContainer">
-      <form class="addEmployeeForm" onSubmit="addEmployee(event)">
-        <!-- REMEMBER to change required to TRUE!!!!!!!!! -->
+
+    <form class="addEmployeeForm" onSubmit="addEmployee(event)">
+      <!-- REMEMBER to change required to TRUE!!!!!!!!! -->
+      <div class="inputContainer">
         <div class="labelInput">
           <label for="firstName">First Name:</label>
           <input data-testid="firstNameInput" id="firstName" type="text" required="false" placeholder="First Name" />
@@ -22,33 +26,40 @@
         <div class="labelInput">
           <label for="lastName">Last Name:</label>
           <input data-testid="lastNameInput" id="lastName" type="text" required="false" placeholder="Last Name" />
-        </div>  
+        </div>
         <div class="labelInput">
           <label for="employeeID">Employee ID#:</label>
           <input data-testid="idInput" id="employeeID" type="number" required="false" placeholder="Employee ID" />
-        </div>  
+        </div>
         <div class="labelInput">
           <label for="jobTitle">Job Title:</label>
           <input data-testid="titleInput" id="jobTitle" type="text" required="false" placeholder="Job Title" />
         </div>
         <div class="labelInput">
           <label for="annualSalary">Annual Salary:</label>
-          <input data-testid="annualSalaryInput" id="annualSalary" type="number" required="false" placeholder="Annual Salary" />
-        </div>  
-        <!-- <button data-testid="submitButton" type="submit" onClick="addEmployee(event)">Add New Employee</button> -->
-        <input type="submit" onClick="addEmployee(event)" data-testid="submitButton" value="Add Employee" />
-      </form>
-    </div>
+          <input data-testid="annualSalaryInput" id="annualSalary" type="number" required="false"
+            placeholder="Annual Salary" />
+        </div>
+      </div>
+      <br>
+      <br>
+       <div class="btnContainer">
+        <button data-testid="submitButton" type="submit" onClick="addEmployee(event)" class="btn">Add New Employee</button>
+      </div>
+
+    </form>
+
     <h2>Employees</h2>
     <!-- Table of employees added here -->
-    <table>
-      <thead>
-        <tr>
-          <th>First Name</th>
+    <table class="table">
+      <thead class="tableHeader">
+        <tr class="tableHeader">
+          <th class="tableHeader">First Name</th>
           <th>Last Name</th>
           <th>ID</th>
           <th>Title</th>
           <th>Annual Salary</th>
+          <th></th>
         </tr>
       </thead>
       <tbody id="employeeData">
@@ -58,9 +69,9 @@
   </main>
   <footer id="footer">
     <div id="monthlyCostData">
-      
+
     </div>
-    
+
 
   </footer>
   <script src="script.js"></script>
